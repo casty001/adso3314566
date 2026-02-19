@@ -9,68 +9,83 @@
         @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
         body {
-            background: linear-gradient(red, blue);
+            background-color: #ee5522;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='105' height='105' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d23d09' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
             color: white;
             font-family: "Luckiest Guy", cursive;
             min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100dvh;
+            margin: 0;
         }
 
         main {
+            text-align: center;
+
             h1 {
                 font-size: 3.4rem;
                 margin: 0;
-
             }
 
             img {
                 border: 4px solid white;
                 border-radius: 50%;
                 height: 200px;
-                display: flex;
-                margin: 1rem auto;
                 width: 200px;
-
-            }
-
-            h4 {
-                font-size: 3.4rem;
-                text-align: center;
-                gap: 0.6rem;
+                display: block;
+                /* Cambiado de flex a block */
+                margin: 1rem auto;
+                object-fit: cover;
             }
 
             menu {
                 display: flex;
                 flex-direction: column;
-                gap: 0.6rem;
+                gap: 0.8rem;
+                padding: 0;
 
-                a:link,
-                a:visited {
-                    background-color: #9fca12;
+                a {
+                    background-color: #ed6815;
                     color: bisque;
                     border-radius: 12rem;
-                    padding:0.4rem;
+                    padding: 0.6rem;
                     display: flex;
-                    align-items: center;         
+                    align-items: center;
                     text-decoration: none;
+                    transition: transform 0.4s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05) translateX(15px);
+                    }
                 }
 
                 span {
                     background-color: red;
-                    color: rgb(0, 0, 0);
+                    color: black;
                     border-radius: 50%;
                     font-size: 2rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 80px;
-                    height: 80px;                 
+                    width: 60px;
+                    height: 60px;
+                    flex-shrink: 0;
                 }
+
+                .text-container {
+                    text-align: left;
+                    padding-left: 1rem;
+                }
+
                 h4 {
+                    font-size: 1.5rem;
                     margin: 0;
+                }
+
+                small {
+                    display: block;
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -83,28 +98,28 @@
         <img src="IMG_20230816_151336.jpg" alt="">
         <h4>Bryan Castillo</h4>
         <menu>
-            <a href="01-emet/">
+            <a href="01-emet/index.html">
                 <span>01</span>
                 <aside>
                     <h4>emmet</h4>
                     <small>work flow-markup y styling</small>
                 </aside>
             </a>
-            <a href="02-html/">
+            <a href="02-html/index.html">
                 <span>02</span>
                 <aside>
                     <h4>html</h4>
                     <small>structure-hypertext markup language</small>
                 </aside>
             </a>
-            <a href="03-css/">
+            <a href="03-css/index.html">
                 <span>03</span>
                 <aside>
                     <h4>css</h4>
                     <small>look & fell -cascading style sheets</small>
                 </aside>
             </a>
-            <a href="04-javascript/">
+            <a href="04-javascript/index.html">
                 <span>04</span>
                 <aside>
                     <h4>javascript</h4>
