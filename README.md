@@ -1,3 +1,3 @@
-![BRYAN_CASTY](https://adso3314566-ten.vercel.app7public7imgs/IMG_20230816_151336.jpg)
+![BRYAN_CASTY](https://adso3314566-ten.vercel.app/src/imgs/IMG_20230816_151336.jpg)
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 [VERCEL URL](https://adso3314566-ten.vercel.app)    
