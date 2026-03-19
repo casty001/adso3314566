@@ -46,6 +46,35 @@ body {
             /* Cambiado de flex a block */
             margin: 1rem auto;
             object-fit: cover;
+        
+        } 
+        h4{
+
+        }
+        header{
+            h1{
+                font-size: 2rem;
+            }
+            h2{
+                font-size: 1rem;
+                color:white;
+            }
+            h1,h2{
+                text-align: center;
+            }
+            section{
+                background-color: #0009;
+                border-radius: 0.2rem;
+                min-width: 380px;
+                padding: 1rem;
+                h3{
+                    border-bottom: 2px dotted #fff;
+                    margin:0;
+                }
+                p{
+                    color:#fff;
+                }
+            }
         }
 
         menu {
