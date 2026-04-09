@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03-anchor</title>
+    <title>14-video</title>
     <link rel="stylesheet" href="../src/css/02-html.css">
-     <link rel="stylesheet" href="../src/css/custom.css">
+    <link rel="stylesheet" href="../src/css/custom.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -14,10 +14,19 @@
 
         section {
             max-width: 380px;
+            margin: 0 auto;
+        }
 
-            a:is(:link, :visited) {
-                color: aliceblue;
-            }
+        video, iframe {
+            width: 100%;
+            height: 100%;
+            border: 4px solid white;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        section a:is(:link, :visited) {
+            color: aliceblue;
         }
     </style>
 </head>
@@ -34,17 +43,18 @@
         </path>
         </svg>
     </a>
+
     <main>
         <header>
-            <h1>08-images</h1>
-            <h2>Inserts an image.
-            </h2>
+            <h1>14-video</h1>
+            <h2>Inserts video files.</h2>
         </header>
+
         <section>
-            <h3>relative path:</h3>
-            <img src="../src/imgs/pana miguel.jpg" alt="">
-            <h3>absolute path: </h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0f0TbvhPQ1h_2Jp9iyGPotl3QD-TkVDFbQ&s" alt="">
+            <video controls poster="../02-html/video/html5.mp4">
+                <source src="video/html5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
     </main>
 </body>

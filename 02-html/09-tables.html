@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-tables</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/custom.css">
+    <style>
+        section {
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .text-right { text-align: right; }
+        .bold { font-weight: bold; }
+
+        /* Colores de la imagen */
+        .bg-yellow { background-color: #ffff00; }
+        .bg-pink { background-color: #e6b8af; }
+        .bg-green { background-color: #93c47d; }
+        .header-table { text-align: center; background-color: white; }
+    </style>
+</head>
+
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z">
+            </path>
+        </svg>
+        <path
+            d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+        </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>09-tables</h1>
+            <h2>Costing Base Table</h2>
+        </header>
+
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="header-table bold">COSTEO BASE</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class="bg-yellow">
+                        <td>COSTO DEL PRODUCTO PLATAFORMA</td>
+                        <td class="text-right">99.000</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>FLETE ESTIMADO</td>
+                        <td class="text-right">19.000</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>% DE DEVOLUCION ESTIMADO</td>
+                        <td class="text-right">20%</td>
+                    </tr>
+                    <tr class="bg-pink">
+                        <td>SEGURO DE DEVOLUCIONES</td>
+                        <td class="text-right">3.800</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>CPA PLATAFORMA MAXIMO PRESUPUESTADO</td>
+                        <td class="text-right">$ 20.000</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>% DE CANCELACION</td>
+                        <td class="text-right">10%</td>
+                    </tr>
+                    <tr class="bg-pink">
+                        <td>% DE DESPACHOS</td>
+                        <td class="text-right">90%</td>
+                    </tr>
+                    <tr class="bg-pink">
+                        <td>CPA REAL DESPACHOS</td>
+                        <td class="text-right">22.000</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>GASTOS ADMINISTRATIVOS</td>
+                        <td class="text-right">5.000</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr class="bg-green bold">
+                        <td>TOTAL PRODUCTO + ENVIO</td>
+                        <td class="text-right">118.000</td>
+                    </tr>
+                    <tr>
+                        <td>COSTO DE INTERMEDIACION INICIAL (DROPSHIPPER)</td>
+                        <td class="text-right">$ 148.801</td>
+                    </tr>
+                    <tr class="bg-yellow">
+                        <td>% MARGEN DE GANANCIA INICIAL</td>
+                        <td class="text-right">15%</td>
+                    </tr>
+                    <tr class="bg-green">
+                        <td>$ MARGEN DE GANANCIA INICIAL</td>
+                        <td class="text-right">$ 22.320</td>
+                    </tr>
+                    <tr class="bg-pink bold">
+                        <td>PRECIO MINIMO DE VENTA</td>
+                        <td class="text-right">$ 175.060</td>
+                    </tr>
+                    <tr class="bg-green bold">
+                        <td>INGRESOS A DROPI X VENTA BRUTOS</td>
+                        <td class="text-right">$ 57.060</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

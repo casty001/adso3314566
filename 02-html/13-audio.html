@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03-anchor</title>
+    <title>13-audio</title>
     <link rel="stylesheet" href="../src/css/02-html.css">
-     <link rel="stylesheet" href="../src/css/custom.css">
+    <link rel="stylesheet" href="../src/css/custom.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -14,16 +14,28 @@
 
         section {
             max-width: 380px;
+            margin: 0 auto;
+            background-color: #0009;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
 
-            a:is(:link, :visited) {
-                color: aliceblue;
-            }
+        /* Estilo para que el reproductor de audio ocupe el ancho disponible */
+        audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        h3 {
+            border-bottom: 2px dotted #fff;
+            color: white;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 
 <body>
-    <a href="../02-html/index.html" class="btn-home">
+     <a href="../02-html/index.html" class="btn-home">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
             <path
                 d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z">
@@ -34,17 +46,19 @@
         </path>
         </svg>
     </a>
+
     <main>
         <header>
-            <h1>08-images</h1>
-            <h2>Inserts an image.
-            </h2>
+            <h1>13-audio</h1>
+            <h2>Inserts audio files.</h2>
         </header>
+
         <section>
-            <h3>relative path:</h3>
-            <img src="../src/imgs/pana miguel.jpg" alt="">
-            <h3>absolute path: </h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0f0TbvhPQ1h_2Jp9iyGPotl3QD-TkVDFbQ&s" alt="">
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio/sena.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </section>
     </main>
 </body>

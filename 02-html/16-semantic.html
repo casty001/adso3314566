@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-semantic - Estilizado</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/custom.css">
+    <style>
+        html { scroll-behavior: smooth; }
+
+        section.main-exercise {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 0 auto;
+            max-width: 800px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h3 {
+            color: #ed6815;
+            border-bottom: 2px solid #ed6815;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .layout-container {
+            border: 2px solid #444;
+            padding: 1rem;
+            margin-bottom: 3rem;
+            background-color: #252525;
+            border-radius: 0.5rem;
+        }
+
+        /* Estilo base de los bloques */
+        .layout-block {
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 1.5rem 0.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Fira Code', monospace;
+            font-weight: bold;
+            display: block;
+            border-radius: 4px;
+            /* CORRECCIÓN DE SOBREDIMENSIÓN */
+            overflow-wrap: break-word; 
+            word-wrap: break-word;
+            min-width: 0; 
+        }
+
+        /* COLORES PARA LAS SECCIONES */
+        .header-bg { background-color: #e74c3c; } /* Rojo */
+        .nav-bg    { background-color: #3498db; } /* Azul */
+        .article-bg { background-color: #2ecc71; } /* Verde */
+        .aside-bg  { background-color: #9b59b6; } /* Púrpura */
+        .footer-bg { background-color: #f1c40f; color: #333; } /* Amarillo */
+        .section-bg { background-color: rgba(0,0,0,0.3); border: 2px dashed #fff; }
+
+        .semantic-content {
+            display: flex;
+            gap: 0.5rem;
+            align-items: stretch;
+        }
+
+        /* Ajuste de proporciones para que no se vea apretado */
+        article.layout-block { flex: 2; margin-bottom: 0; }
+        aside.layout-block { flex: 1; margin-bottom: 0; }
+
+        .sub-block {
+            margin-top: 1rem;
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z">
+            </path>
+        </svg>
+        <path
+            d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+        </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>16-semantic</h1>
+            <h2>Layout Comparison with Colors</h2>
+        </header>
+
+        <section class="main-exercise">
+            
+            <h3>1. Non-Semantic (Old Style)</h3>
+            <div id="contenedor" class="layout-container">
+                <div class="header-bg layout-block">DIV CLASS="HEADER"</div>
+                <div class="article-bg layout-block" style="padding: 3rem 0;">DIV CLASS="CONTENT"</div>
+                <div class="footer-bg layout-block">DIV CLASS="FOOTER"</div>
+            </div>
+
+            <h3>2. Semantic (HTML5 - Anti-Overflow)</h3>
+            <div class="layout-container">
+                <header class="header-bg layout-block">&lt;header&gt;</header>
+                <nav class="nav-bg layout-block">&lt;nav&gt;</nav>
+                
+                <div class="semantic-content">
+                    <article class="article-bg layout-block">
+                        &lt;article&gt;
+                        <section class="section-bg sub-block">&lt;section&gt;</section>
+                    </article>
+                    
+                    <aside class="aside-bg layout-block">&lt;aside&gt;</aside>
+                </div>
+                
+                <footer class="footer-bg layout-block">&lt;footer&gt;</footer>
+            </div>
+            
+        </section>
+    </main>
+</body>
+</html> 

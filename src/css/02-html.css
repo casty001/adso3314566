@@ -19,15 +19,14 @@ body {
         height: 32px;
         opacity: .4;
         padding: 0.4rem;
-        inset: 0.4rem;
-        transition: all 0.46 ease-in;
+        inset: 0.4rem auto auto 0.4rem; /* Ajustado para que se quede en la esquina superior izquierda */
+        transition: all 0.4s ease-in; /* Se agregó la 's' de segundos */
 
         &:hover {
             transform: scale(1.1);
             opacity: 1;
         }
     }
-
 
     main {
         text-align: center;
@@ -43,38 +42,33 @@ body {
             height: 200px;
             width: 200px;
             display: block;
-            /* Cambiado de flex a block */
             margin: 1rem auto;
             object-fit: cover;
-        
-        } 
-        h4{
-
         }
-        header{
-            h1{
-                font-size: 2rem;
-            }
-            h2{
+
+        header {
+            h1 { font-size: 2rem; }
+            h2 {
                 font-size: 1rem;
-                color:white;
+                color: white;
             }
-            h1,h2{
-                text-align: center;
+            h1, h2 { text-align: center; }
+        }
+
+        /* Sacado de header para que coincida con el HTML */
+        section {
+            background-color: #0009;
+            border-radius: 0.2rem;
+            min-width: 380px;
+            padding: 1rem;
+            margin-top: 1rem;
+
+            h3 {
+                border-bottom: 2px dotted #fff;
+                margin: 0;
+                color: white;
             }
-            section{
-                background-color: #0009;
-                border-radius: 0.2rem;
-                min-width: 380px;
-                padding: 1rem;
-                h3{
-                    border-bottom: 2px dotted #fff;
-                    margin:0;
-                }
-                p{
-                    color:#fff;
-                }
-            }
+            p { color: #fff; }
         }
 
         menu {

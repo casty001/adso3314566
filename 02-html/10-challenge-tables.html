@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-challenge-tables</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/custom.css">
+    <style>
+        section {
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid white;
+            width: 50px;
+            height: 50px;
+        }
+
+        .bg-black { background-color: #000; }
+        .bg-gray { background-color: #444; }
+        
+        h3 { color: #ed6815; margin-bottom: 1rem; }
+    </style>
+</head>
+
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z">
+            </path>
+        </svg>
+        <path
+            d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+        </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>10-challenge-tables</h1>
+            <h2>Advanced Rowspan and Colspan</h2>
+        </header>
+
+        <section>
+            <div>
+                <h3>Challenge: Emoji Diamond Layout</h3>
+                <table>
+                    <tr>
+                        <td colspan="4" class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td colspan="4" class="bg-gray"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td rowspan="2" class="bg-black">😎</td>
+                        <td class="bg-black">😎</td>
+                        <td colspan="3" class="bg-gray"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td colspan="2" class="bg-gray"></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td colspan="3" class="bg-black">😎</td>
+                        <td class="bg-black">😎</td>
+                        <td class="bg-gray"></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-black">😎</td>
+                        <td colspan="5" class="bg-black">😎</td>
+                        <td class="bg-black">😎</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-gray"></td>
+                        <td class="bg-black">😎</td>
+                        <td colspan="3" class="bg-black">😎</td>
+                        <td class="bg-black">😎</td>
+                        <td class="bg-gray"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

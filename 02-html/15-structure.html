@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03-anchor</title>
+    <title>15-structure</title>
     <link rel="stylesheet" href="../src/css/02-html.css">
-     <link rel="stylesheet" href="../src/css/custom.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        section {
-            max-width: 380px;
-
-            a:is(:link, :visited) {
-                color: aliceblue;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../src/css/custom.css">
 </head>
 
 <body>
@@ -34,17 +20,24 @@
         </path>
         </svg>
     </a>
+
     <main>
         <header>
-            <h1>08-images</h1>
-            <h2>Inserts an image.
-            </h2>
+            <h1>Estructura Básica</h1>
+            <p>Representación del DOM según el material de clase.</p>
         </header>
-        <section>
-            <h3>relative path:</h3>
-            <img src="../src/imgs/pana miguel.jpg" alt="">
-            <h3>absolute path: </h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0f0TbvhPQ1h_2Jp9iyGPotl3QD-TkVDFbQ&s" alt="">
+
+        <section style="background-color: #333; padding: 20px; border-radius: 8px; color: white;">
+            <h2>Contenido del Body</h2>
+            <p>Todo lo que escribas dentro de las etiquetas <strong>body</strong> es lo que el usuario final podrá ver en el navegador.</p>
+            
+            <hr>
+
+            <ul>
+                <li><strong>HTML:</strong> Raíz del documento.</li>
+                <li><strong>HEAD:</strong> Configuración y metadatos.</li>
+                <li><strong>BODY:</strong> Contenido visible.</li>
+            </ul>
         </section>
     </main>
 </body>
