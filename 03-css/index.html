@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-HTML</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <style>
+        div.menus{
+            display:flex;
+            align-items:start;
+            gap:1rem;
+            h3{
+            color: #fff9;
+            text-align:center;
+            padding-bottom:0.4rem;
+            border-bottom:2px solid #f999;
+            }
+            @media screen and(max-width:580px){
+                main{
+                    width:250px;
+                }
+                div.menus{
+                    flex-direction:column;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <h1>03-CSS</h1>
+        <img src="../src/imgs/logo-css.png" alt="">
+        
+        <h4>Bryan Castillo</h4>
+        <div class="menus">
+<menu>
+                <a href="01-document.html">
+        <span>01</span>
+        <aside>
+            <h4>document-style</h4>
+        </aside>
+    </a>
+    <a href="02-css-file.html">
+        <span>02</span>
+        <aside>
+            <h4>css-file</h4>
+        </aside>
+    </a>
+    <a href="03-attr-style.html">
+        <span>03</span>
+        <aside>
+            <h4>attr-style</h4>
+        </aside>
+    </a>
+    <a href="04-basic-selectors.html">
+        <span>04</span>
+        <aside>
+            <h4>basic-selectors</h4>
+        </aside>
+    </a>
+    <a href="05-advanced.html">
+        <span>05</span>
+        <aside>
+            <h4>advanced-selectors</h4>
+        </aside>
+    </a>
+    <a href="06-specificity.html">
+        <span>06</span>
+        <aside>
+            <h4>specificity</h4>
+        </aside>
+    </a>
+    <a href="43-flexbox.html">
+        <span>43</span>
+        <aside>
+            <h4>flexbox</h4>
+        </aside>
+    </a>
+    <a href="44-grid.html">
+        <span>44</span>
+        <aside>
+            <h4>grid</h4>
+        </aside>
+    </a>
+    <a href="45-challenge-grid.html">
+        <span>45</span>
+        <aside>
+            <h4>challenge-grid</h4>
+        </aside>
+    </a>    
+        </menu>
+        </div>
+        
+    </main>
+</body>
+
+</html>

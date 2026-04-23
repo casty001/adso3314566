@@ -1,0 +1,17 @@
+
+    div.adso {
+        /* Se corrigió la ortografía y se cambiaron llaves por paréntesis */
+        background: linear-gradient(black, yellow); 
+        
+        /* Se eliminó el espacio entre el número y 'rem' */
+        border-radius: 0.4rem; 
+        
+        /* Se eliminó el '#' para usar el nombre del color */
+        color: white; 
+        
+        padding: 1rem;
+        margin: 4rem auto;
+        
+        /* Se eliminó el espacio entre el número y 'rem' */
+        font-size: 3.6rem;
+    }
