@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-title</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        main {
+            width: 100%;
+            section.porcentage{
+                margin: 0 auto;
+                width: 80%;
+                div.parent{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div{
+                        height: 50dvh;
+                        justify-content: center;
+                        font-size: 25%;
+                        align-items: center;
+                        height: 50dvh;
+                        &.child{
+                            background: crimson;
+                            width: 70%;
+                        }&.child2{
+                            background: cadetblue;
+                            width: 30%;
+                    }
+                }
+            border:4px solid red;
+            min-width: 80%!important;
+            width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z">
+            </path>
+        </svg>
+        <path
+            d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+        </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h3>09 absolute units</h3>
+            <h2>specify a fixed length value</h2>
+            <ul>
+                        <li>inch(in)</li>       
+                        <li>centimeter(cm)</li>  
+                        <li>millimeter(mm)</li>  
+                        <li>point(pt)</li>
+                        <li>pica(pc)</li>  
+            </ul>  
+        </header>
+        <section class="percentage">
+            <div class="parent">
+                <div class="child">70%</div>
+                <div class="child2">30%</div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

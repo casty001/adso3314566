@@ -8,21 +8,20 @@
     <link rel="stylesheet" href="../src/css/03-css.css">
     <link rel="stylesheet" href="../src/css/externalfile.css">
     <style>
-        section {
-            border-radius: 0.4rem;
-            border: none;
-            padding: 0.8rem;
-            font-size: 1.2rem;
-            display: flex;
-            margin: 4rem auto;
+        li.abs1{
+            font-size:0.5in;
         }
-
-        section button.green {
-            background: green;
+        li.abs2{
+            font-size:1cm;
         }
-
-        section button.green {
-            background: pink;
+        li.abs3 {
+            font-size:10mm;
+        }
+        li.abs4{
+            font-size:10pt;
+        }
+        li.abs5{
+            font-size:2pc;
         }
     </style>
 </head>
@@ -41,22 +40,24 @@
     </a>
     <main>
         <header>
+            <h3>09 absolute units</h3>
+            <h2>specify a fixed length value</h2>
+            <ul>
+                        <li>inch(in)</li>       
+                        <li>centimeter(cm)</li>  
+                        <li>millimeter(mm)</li>  
+                        <li>point(pt)</li>
+                        <li>pica(pc)</li>  
+            </ul>  
         </header>
         <section>
-            <h3>07-inheritence</h3>
             <ul>
-                <li>resident evil
-                    <ol>
-                        <li>leon kennedy</li>
-                        <li>maria</li>
-                        <li>grace</li>
-                    </ol>
-                </li>
-                <li>Type/tag(p)</li>
+                <li class="abs1">inch: 0.5in</li>
+                <li class="abs2">centimeter: 1cm</li>
+                <li class="abs3">millimeter: 10mm</li>
+                <li class="abs4">point: 10pt</li>
+                <li class="abs5">pica: 2pc</li>
             </ul>
-            <li>crimson desert</li>
-            <li>pragmata</li>
-            <li>grand theft auto IV</li>
         </section>
     </main>
 </body>

@@ -8,21 +8,17 @@
     <link rel="stylesheet" href="../src/css/03-css.css">
     <link rel="stylesheet" href="../src/css/externalfile.css">
     <style>
-        section {
-            border-radius: 0.4rem;
-            border: none;
-            padding: 0.8rem;
-            font-size: 1.2rem;
-            display: flex;
-            margin: 4rem auto;
+        li.rel1{
+            font-size:15px;
         }
-
-        section button.green {
-            background: green;
+        li.rel2{
+            font-size:1.5em;
         }
-
-        section button.green {
-            background: pink;
+        li.rel3{
+            font-size:2rem;
+        }
+        li.rel4{
+            font-size:2.4ex;
         }
     </style>
 </head>
@@ -41,22 +37,26 @@
     </a>
     <main>
         <header>
+            <h3>08 realtiva units</h3>
+            <h2>specify a lenght relative to another lenght property</h2>
+            <ul>
+                        <li>pixel(px)</li>       
+                        <li>m(em)</li>  
+                        <li>root m(rem)</li>  
+                        <li>viewport units horizontal(vh)</li>  
+                        <li>viewport units with(vw)</li>  
+                        <li>large units with(lvh|lvw)</li>  
+                        <li>small units with(svh|svw)</li>  
+                        <li>dinamic viewport(dvh|dvw)</li>  
+            </ul>  
         </header>
         <section>
-            <h3>07-inheritence</h3>
             <ul>
-                <li>resident evil
-                    <ol>
-                        <li>leon kennedy</li>
-                        <li>maria</li>
-                        <li>grace</li>
-                    </ol>
-                </li>
-                <li>Type/tag(p)</li>
+                <li class="rel1">px 15px</li>
+                <li class="rel2">em 1.5em</li>
+                <li class="rel3">ren 2rem</li>
+                <li class="rel4">ex: 2.4ex</li>
             </ul>
-            <li>crimson desert</li>
-            <li>pragmata</li>
-            <li>grand theft auto IV</li>
         </section>
     </main>
 </body>
