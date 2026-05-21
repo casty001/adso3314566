@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-box-model</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* La Caja Maestra */
+        .box {
+            /* 1. Content */
+            width: 300px;
+            height: 150px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+
+            /* 2. Padding (Espacio interno) */
+            padding: 40px;
+
+            /* 3. Border (Borde) */
+            border: 10px solid var(--primary-color);
+
+            /* 4. Margin (Espacio externo) */
+            margin: 50px;
+
+            /* Estética */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            border-color: #2ecc71;
+        }
+
+        /* Explicación visual */
+        .label {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .bg-margin  { background-color: #f8c291; color: black; }
+        .bg-border  { background-color: #3498db; }
+        .bg-padding { background-color: #a29bfe; }
+        .bg-content { background-color: #ffffff; color: black; border: 1px solid #ddd; }
+
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h3>CSS Guide</h3>
+        <h2>The Box Model</h2>
+
+        <div class="labels-guide">
+            <span class="label bg-margin">Margin</span>
+            <span class="label bg-border">Border</span>
+            <span class="label bg-padding">Padding</span>
+            <span class="label bg-content">Content</span>
+        </div>
+
+        <!-- El elemento caja -->
+        <div class="box">
+            ¡Soy una caja!
+        </div>
+
+        <section style="max-width: 500px; text-align: left; line-height: 1.6;">
+            <p>Cada vez que creas un elemento en HTML, el navegador lo renderiza como una caja rectangular. Puedes controlar el tamaño total sumando estas propiedades o usando <code>box-sizing: border-box;</code>.</p>
+        </section>
+    </main>
+
+</body>
+</html>

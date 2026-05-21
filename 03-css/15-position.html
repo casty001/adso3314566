@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-position</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            height: 2000px; /* Para probar el scroll en Fixed y Sticky */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border: 2px solid #ddd;
+            position: relative; /* Contenedor de referencia */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        /* 1. Static: El valor por defecto. No responde a top/left. */
+        .static {
+            background-color: #34495e;
+            position: static;
+        }
+
+        /* 2. Relative: Se mueve respecto a su posición original sin afectar a los demás. */
+        .relative {
+            background-color: #3498db;
+            position: relative;
+            top: 20px;
+            left: 50px;
+        }
+
+        /* 3. Absolute: Se posiciona respecto al ancestro más cercano con posición (non-static). */
+        .absolute {
+            background-color: #e74c3c;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        /* 4. Fixed: Se queda pegado en la ventana del navegador (viewport). */
+        .fixed {
+            background-color: #2ecc71;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 0.8rem;
+        }
+
+        /* 5. Sticky: Se comporta como relativo hasta que alcanza un punto en el scroll. */
+        .sticky {
+            background-color: #f1c40f;
+            color: black;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+        }
+
+        section {
+            margin-top: 100px;
+            background: #eee;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>CSS Positioning</h3>
+        
+        <div class="box static">Static</div>
+        
+        <div class="box relative">Relative</div>
+        
+        <div class="box absolute">Absolute</div>
+
+        <div class="sticky">I am Sticky! (Desliza hacia abajo)</div>
+
+        <section>
+            <p><strong>Static:</strong> Flujo normal del documento.</p>
+            <p><strong>Relative:</strong> Movido con <code>top/left</code> pero deja el hueco original.</p>
+            <p><strong>Absolute:</strong> Flota fuera del flujo. Se alinea con el borde de la caja blanca (que tiene <code>relative</code>).</p>
+        </section>
+    </div>
+
+    <div class="box fixed">Fixed</div>
+
+</body>
+</html>

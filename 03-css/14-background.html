@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-background</title>
+     <link rel="stylesheet" href="../src/css/03-css.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* El contenedor donde probaremos los backgrounds */
+        .preview-box {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            
+            /* --- PROPIEDADES DE BACKGROUND --- */
+            background-color: #3498db; 
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /* Prueba también: contain, auto, 50% */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            font-size: 1.5rem;
+            transition: all 0.5s ease;
+        }
+
+        /* Controles para entender las propiedades */
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h3>CSS Workshop</h3>
+        <h2>Propiedades de Background</h2>
+
+        <div class="preview-box">
+            Visualización de Fondo
+        </div>
+
+        <div class="controls">
+            <div>
+                <strong>1. color</strong>
+                <p>Define el color de base. Útil mientras carga la imagen o como capa final.</p>
+            </div>
+            <div>
+                <strong>2. image</strong>
+                <p>Coloca una imagen o un degradado (<code>linear-gradient</code>).</p>
+            </div>
+            <div>
+                <strong>3. repeat</strong>
+                <p>Valores: <code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>.</p>
+            </div>
+            <div>
+                <strong>4. position</strong>
+                <p>Ubica la imagen: <code>top</code>, <code>center</code>, <code>bottom</code>, <code>left</code>, <code>right</code> o px/%.</p>
+            </div>
+            <div>
+                <strong>5. size</strong>
+                <p><code>cover</code> (llena todo), <code>contain</code> (se ve completa), o tamaños fijos.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

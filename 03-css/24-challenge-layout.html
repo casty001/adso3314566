@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Layout Challenge</title>
+    <style>
+        /* Variables y Reset General */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #17a153;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- HEADER Y LOGO --- */
+        header {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0 0 0;
+        }
+
+        /* Logo Principal Superior (Cuadro verde abajo a la izquierda) */
+        .logo-main {
+            width: 190px;
+            height: 190px;
+            /* Al ser un cuadrado perfecto en el sprite, le damos estas dimensiones */
+            background-image: url('../src/imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-position: -10px -400px;
+            /* Apunta al recuadro verde con logo blanco */
+            margin-bottom: 20px;
+
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 35px;
+        }
+
+        .btn-nav {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0b5e2d;
+            /* Verde oscuro para los botones */
+            padding: 15px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            border-bottom: 4px solid #ffffff;
+            /* Línea blanca inferior */
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-nav:first-child {
+            margin-left: 0;
+        }
+
+        .btn-nav:last-child {
+            margin-right: 0;
+        }
+
+        .btn-nav:hover {
+            background-color: #084420;
+        }
+
+        /* --- SECCIÓN DE TARJETAS (SPRITES) --- */
+        .cards-container {
+            background-color: #0b5e2d;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 30px auto;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ffffff;
+            height: 175px;
+            position: relative;
+            background-image: url('../src/imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            /* Apunta a la sección superior derecha (Agua con burbujas y cuello de botella) */
+            background-position: -495px -30px;
+            overflow: hidden
+        }
+
+        /* Texto sobre las tarjetas */
+        .card span {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 6px 16px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* --- SECCIÓN INFERIOR (CONTENIDO) --- */
+        .content-section {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 120px 1fr 120px;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Sprite para el logo redondo inferior izquierdo */
+        .logo-footer {
+            width: 90px;
+            height: 90px;
+            background-image: url('../src/imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-position: -302px -505px;
+            /* Apunta al círculo Sprite del centro inferior */
+            justify-self: center;
+        }
+
+        .text-content {
+            color: #108a43;
+            /* Texto verde */
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Sprite para la lata de la derecha (Lata Sprite Zero abajo a la derecha) */
+        .can-footer {
+    width: 100px;
+    height: 195px;
+    background-image: url('../src/imgs/spriteweb.png');
+    background-repeat: no-repeat;
+    /* Coordenadas exactas para la lata de aluminio verde */
+    background-position: -80px -200px; 
+    justify-self: center;
+
+}
+
+        .content-section {
+            margin-bottom: 30px !important;
+        }
+
+        /* --- NUEVA SECCIÓN FINAL --- */
+        .footer-products-section {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            padding: 40px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Sprite del Combo de Productos (Ubicado abajo a la derecha en la hoja 800x600) */
+        .combo-products-sprite {
+    width: 275px;
+    height: 154px;
+    background-image: url('../src/imgs/spriteweb.png');
+    background-repeat: no-repeat;
+    /* Coordenadas exactas para centrar el pack completo sin cortes */
+    background-position: -520px -440px; 
+}
+
+        /* Menú de navegación del pie de página */
+        .nav-footer {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+            border-top: 1px solid #e0e0e0;
+            /* Línea sutil divisoria superior opcional */
+            padding-top: 20px;
+        }
+
+        .nav-footer a {
+            text-decoration: none;
+            color: #777777;
+            /* Texto gris de los enlaces inferiores */
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-footer a:hover {
+            color: #108a43;
+            /* Cambia a verde al pasar el cursor */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-main"></div>
+
+        <nav>
+            <a href="#" class="btn-nav">Inicio</a>
+            <a href="#" class="btn-nav">Nosotros</a>
+            <a href="#" class="btn-nav">Portafolio</a>
+            <a href="#" class="btn-nav">Servicios</a>
+            <a href="#" class="btn-nav">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="cards-container">
+        <div class="card"><span>Sprite 01</span></div>
+        <div class="card"><span>Sprite 02</span></div>
+        <div class="card"><span>Sprite 03</span></div>
+    </section>
+
+    <main class="content-section">
+        <div class="logo-footer"></div>
+        <div class="text-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt
+            dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit
+            architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis?
+        </div>
+        <div class="can-footer"></div>
+    </main>
+    <main class="content-section">
+        <div class="logo-footer"></div>
+        <div class="text-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt
+            dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit
+            architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem
+        </div>
+        <div class="can-footer"></div>
+    </main>
+
+    <main class="content-section">
+        <div class="logo-footer"></div>
+        <div class="text-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt
+            dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit
+            architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis?
+            Ullam autem
+            maxime nostrum reprehenderit mollitia.
+        </div>
+        <div class="can-footer"></div>
+    </main>
+
+    <section class="footer-products-section">
+        <div class="combo-products-sprite"></div>
+
+        <nav class="nav-footer">
+            <a href="#">INICIO</a>
+            <a href="#">NOSOTROS</a>
+            <a href="#">PORTAFOLIO</a>
+            <a href="#">SERVICIOS</a>
+            <a href="#">CONTACTO</a>
+        </nav>
+    </section>
+
+</body>
+
+</html>
