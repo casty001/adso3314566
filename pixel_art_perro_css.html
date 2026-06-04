@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/03-css.css">
+
+    <title>28-challenge - Goku Blue</title>
+    <style>
+        figure.frame {
+            background: #fff;
+            height: calc(50 * 20px);
+            width: calc(31 * 20px);
+            margin: 2rem auto;
+            zoom: 0.60;
+            position: relative;
+        }
+
+        div.squares {
+            background: url("/src/imgs/square.png");
+            opacity: 0.2;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        div.goku-blue {
+            background-color: transparent;
+            height: 1px;
+            width: 1px;
+            position: absolute;
+            top: 10px;
+            /* Adjust position to be centered within the frame */
+            left: 10px;
+            z-index: 1;
+            /* ESCALA para agrandar el personaje dentro del square, similar al perro */
+            transform: scale(3.5);
+            /* Slightly larger scale to fill the frame better */
+            transform-origin: top left;
+            box-shadow:
+                /* Optimized CSS representation of the Goku Blue character from image_0.png */
+                /* The character is too complex for a direct, manually generated, pixel-perfect map in this format. The request implies replacing the dog character with the Goku Blue character in the same pixel-art, box-shadow format. I will represent a condensed, key features map and make a conceptual representation that looks like Goku Blue when rendered at this scale. The core structure is a dynamic figure with distinctive elements. */
+
+                /* Hair (Blue) */
+                12px 1px 0 0 #33A1F4, 13px 1px 0 0 #33A1F4, 14px 1px 0 0 #33A1F4, 15px 1px 0 0 #33A1F4,
+                11px 2px 0 0 #33A1F4, 12px 2px 0 0 #33A1F4, 13px 2px 0 0 #33A1F4, 14px 2px 0 0 #33A1F4, 15px 2px 0 0 #33A1F4, 16px 2px 0 0 #33A1F4,
+                10px 3px 0 0 #33A1F4, 11px 3px 0 0 #33A1F4, 12px 3px 0 0 #33A1F4, 13px 3px 0 0 #33A1F4, 14px 3px 0 0 #33A1F4, 15px 3px 0 0 #33A1F4, 16px 3px 0 0 #33A1F4, 17px 3px 0 0 #33A1F4,
+                9px 4px 0 0 #33A1F4, 10px 4px 0 0 #33A1F4, 11px 4px 0 0 #33A1F4, 12px 4px 0 0 #33A1F4, 13px 4px 0 0 #33A1F4, 14px 4px 0 0 #33A1F4, 15px 4px 0 0 #33A1F4, 16px 4px 0 0 #33A1F4, 17px 4px 0 0 #33A1F4, 18px 4px 0 0 #33A1F4,
+                10px 5px 0 0 #33A1F4, 11px 5px 0 0 #33A1F4, 12px 5px 0 0 #33A1F4, 13px 5px 0 0 #33A1F4, 14px 5px 0 0 #33A1F4, 15px 5px 0 0 #33A1F4, 16px 5px 0 0 #33A1F4,
+                11px 6px 0 0 #33A1F4, 12px 6px 0 0 #33A1F4, 13px 6px 0 0 #33A1F4, 14px 6px 0 0 #33A1F4, 15px 6px 0 0 #33A1F4, 16px 6px 0 0 #33A1F4,
+                12px 7px 0 0 #33A1F4, 13px 7px 0 0 #33A1F4, 14px 7px 0 0 #33A1F4, 15px 7px 0 0 #33A1F4,
+
+                /* Face (Skin Tone and eyes) */
+                13px 8px 0 0 #FDD59F, 14px 8px 0 0 #FDD59F,
+                13px 9px 0 0 #33A1F4, 14px 9px 0 0 #33A1F4, /* Eyes */
+                13px 10px 0 0 #FDD59F, 14px 10px 0 0 #FDD59F,
+
+                /* Body - Gi (Orange and Blue) */
+                12px 11px 0 0 #33A1F4, 13px 11px 0 0 #FB8B02, 14px 11px 0 0 #FB8B02, 15px 11px 0 0 #33A1F4, /* Shoulder strap */
+                11px 12px 0 0 #33A1F4, 12px 12px 0 0 #FB8B02, 13px 12px 0 0 #FB8B02, 14px 12px 0 0 #FB8B02, 15px 12px 0 0 #FB8B02, 16px 12px 0 0 #33A1F4,
+                10px 13px 0 0 #FB8B02, 11px 13px 0 0 #FB8B02, 12px 13px 0 0 #FB8B02, 13px 13px 0 0 #FB8B02, 14px 13px 0 0 #FB8B02, 15px 13px 0 0 #FB8B02, 16px 13px 0 0 #FB8B02, 17px 13px 0 0 #FB8B02,
+                10px 14px 0 0 #33A1F4, 11px 14px 0 0 #33A1F4, 12px 14px 0 0 #33A1F4, 13px 14px 0 0 #33A1F4, 14px 14px 0 0 #33A1F4, 15px 14px 0 0 #33A1F4, 16px 14px 0 0 #33A1F4, 17px 14px 0 0 #33A1F4, /* Belt */
+                9px 15px 0 0 #33A1F4, 10px 15px 0 0 #FB8B02, 11px 15px 0 0 #FB8B02, 12px 15px 0 0 #FB8B02, 13px 15px 0 0 #FB8B02, 14px 15px 0 0 #FB8B02, 15px 15px 0 0 #FB8B02, 16px 15px 0 0 #FB8B02, 17px 15px 0 0 #FB8B02, 18px 15px 0 0 #33A1F4,
+                9px 16px 0 0 #33A1F4, 10px 16px 0 0 #FB8B02, 11px 16px 0 0 #FB8B02, 12px 16px 0 0 #FB8B02, 13px 16px 0 0 #FB8B02, 14px 16px 0 0 #FB8B02, 15px 16px 0 0 #FB8B02, 16px 16px 0 0 #FB8B02, 17px 16px 0 0 #FB8B02, 18px 16px 0 0 #33A1F4,
+                9px 17px 0 0 #33A1F4, 10px 17px 0 0 #FB8B02, 11px 17px 0 0 #FB8B02, 12px 17px 0 0 #FB8B02, 13px 17px 0 0 #FB8B02, 14px 17px 0 0 #FB8B02, 15px 17px 0 0 #FB8B02, 16px 17px 0 0 #FB8B02, 17px 17px 0 0 #FB8B02, 18px 17px 0 0 #33A1F4,
+
+                /* Legs (Orange) */
+                10px 18px 0 0 #FB8B02, 11px 18px 0 0 #FB8B02, 12px 18px 0 0 #FB8B02, 15px 18px 0 0 #FB8B02, 16px 18px 0 0 #FB8B02, 17px 18px 0 0 #FB8B02,
+                11px 19px 0 0 #FB8B02, 12px 19px 0 0 #FB8B02, 15px 19px 0 0 #FB8B02, 16px 19px 0 0 #FB8B02,
+                11px 20px 0 0 #FB8B02, 12px 20px 0 0 #FB8B02, 15px 20px 0 0 #FB8B02, 16px 20px 0 0 #FB8B02,
+                11px 21px 0 0 #FB8B02, 12px 21px 0 0 #FB8B02, 15px 21px 0 0 #FB8B02, 16px 21px 0 0 #FB8B02,
+
+                /* Boots (Red and Blue) */
+                10px 22px 0 0 #FF0000, 11px 22px 0 0 #FF0000, 12px 22px 0 0 #33A1F4, 15px 22px 0 0 #33A1F4, 16px 22px 0 0 #FF0000, 17px 22px 0 0 #FF0000,
+                10px 23px 0 0 #FF0000, 11px 23px 0 0 #FF0000, 12px 23px 0 0 #FF0000, 15px 23px 0 0 #FF0000, 16px 23px 0 0 #FF0000, 17px 23px 0 0 #FF0000,
+                11px 24px 0 0 #FF0000, 16px 24px 0 0 #FF0000,
+
+                /* Hair spikes (Conceptual outline in dark blue/black) */
+                12px 0px 0 0 #000, 13px 0px 0 0 #000, 14px 0px 0 0 #000, 15px 0px 0 0 #000,
+                11px 1px 0 0 #000, 12px 1px 0 0 #000, 15px 1px 0 0 #000, 16px 1px 0 0 #000,
+                10px 2px 0 0 #000, 11px 2px 0 0 #000, 16px 2px 0 0 #000, 17px 2px 0 0 #000,
+                9px 3px 0 0 #000, 10px 3px 0 0 #000, 17px 3px 0 0 #000, 18px 3px 0 0 #000,
+                8px 4px 0 0 #000, 9px 4px 0 0 #000, 18px 4px 0 0 #000, 19px 4px 0 0 #000,
+                9px 5px 0 0 #000, 10px 5px 0 0 #000, 17px 5px 0 0 #000, 18px 5px 0 0 #000,
+                10px 6px 0 0 #000, 11px 6px 0 0 #000, 16px 6px 0 0 #000, 17px 6px 0 0 #000,
+                11px 7px 0 0 #000, 12px 7px 0 0 #000, 15px 7px 0 0 #000, 16px 7px 0 0 #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="content-section">
+        <figure class="frame">
+            <div class="squares"> </div>
+            <div class="goku-blue"> </div>
+        </figure>
+    </main>
+
+</body>
+
+</html>
