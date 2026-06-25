@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-media-queries</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+        *{
+            transition: all 0.5s ease-in;
+        }
+        body{
+            font-family: Poppins;
+            background-color: #003675;
+            color:#fff;
+            main{
+                padding: 4rem;
+                header{
+                    figure.logo{
+                        background: url(../src/imgs/pepsi01.png);
+                        height: 354px;
+                        width: 919px;
+                    }
+                }
+                section{
+                    h1{
+                        text-align: center;
+                        span.md,span.sm{
+                            display: none;
+                        }
+                    }
+                    p{
+                        margin-top: 4rem;
+                        text-align: justify;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+        @media (max-width:1024px)
+        {
+            body main{
+                header{
+                    figure.logo{
+                        background: url(../src/imgs/pepsi02.png);
+                        height: 370px;
+                        width: 348px;
+                    }
+                }
+                section{
+                    h1{
+                        font-size: 2rem;
+                        span.lg,span.sm{
+                            display: none;
+                        }span.md{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:758px)
+        {
+            body main{
+                header{
+                    figure.logo{
+                        background: url(../src/imgs/pepsi03.png);
+                        height: 156px;
+                        width: 162px;
+                    }
+                }
+                section{
+                    h1{
+                        font-size: 1.2rem;
+                        span.lg,span.sm{
+                            display: none;
+                        }span.md{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        </header>
+        <section>
+            <h1>media queries <span class="ld">(>1024)</span class="md"><span>(>1024)</span><span class="sm">(>1024)</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vero quis ipsa dolorum perferendis voluptas, tempora at provident iste illo debitis molestiae commodi quisquam accusantium, cum esse expedita autem architecto? Iure voluptatum sit dicta fugit laborum quam dolores, est facere quod repudiandae repellendus laudantium, consectetur earum deleniti nam saepe ad, molestias asperiores eveniet. Similique sit ratione voluptates adipisci tempora tenetur impedit, officia ipsam, cum, consequatur tempore? Nostrum quia, dolore odio minus voluptas id tenetur quam praesentium! Ex dolorum atque veniam rerum vitae qui aspernatur unde maiores illum. Consequatur assumenda accusamus iusto odit magnam perspiciatis molestiae nisi placeat sunt officiis sint itaque minima quaerat nemo ea numquam, impedit repellat sed vel eveniet molestias explicabo! Possimus dolorum maiores, ducimus est exercitationem incidunt.</p>
+        </section>
+    </main>
+</body>
+
+</html>
