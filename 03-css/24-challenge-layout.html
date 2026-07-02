@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprite Layout Challenge</title>
     <style>
-        /* Variables y Reset General */
         * {
             margin: 0;
             padding: 0;
@@ -20,8 +19,6 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* --- HEADER Y LOGO --- */
         header {
             width: 100%;
             max-width: 1000px;
@@ -30,21 +27,15 @@
             align-items: center;
             padding: 20px 0 0 0;
         }
-
-        /* Logo Principal Superior (Cuadro verde abajo a la izquierda) */
         .logo-main {
             width: 190px;
             height: 190px;
-            /* Al ser un cuadrado perfecto en el sprite, le damos estas dimensiones */
             background-image: url('../src/imgs/spriteweb.png');
             background-repeat: no-repeat;
             background-position: -10px -400px;
-            /* Apunta al recuadro verde con logo blanco */
             margin-bottom: 20px;
 
         }
-
-        /* --- MENÚ DE NAVEGACIÓN --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -57,7 +48,6 @@
             text-decoration: none;
             color: #ffffff;
             background-color: #0b5e2d;
-            /* Verde oscuro para los botones */
             padding: 15px 0;
             font-weight: bold;
             text-transform: uppercase;
@@ -66,7 +56,6 @@
             flex: 1;
             margin: 0 10px;
             border-bottom: 4px solid #ffffff;
-            /* Línea blanca inferior */
             transition: background-color 0.2s ease;
         }
 
@@ -81,8 +70,6 @@
         .btn-nav:hover {
             background-color: #084420;
         }
-
-        /* --- SECCIÓN DE TARJETAS (SPRITES) --- */
         .cards-container {
             background-color: #0b5e2d;
             width: 100%;
@@ -100,12 +87,9 @@
             position: relative;
             background-image: url('../src/imgs/spriteweb.png');
             background-repeat: no-repeat;
-            /* Apunta a la sección superior derecha (Agua con burbujas y cuello de botella) */
             background-position: -495px -30px;
             overflow: hidden
         }
-
-        /* Texto sobre las tarjetas */
         .card span {
             position: absolute;
             top: 20px;
@@ -119,8 +103,6 @@
             border-radius: 4px;
             white-space: nowrap;
         }
-
-        /* --- SECCIÓN INFERIOR (CONTENIDO) --- */
         .content-section {
             background-color: #ffffff;
             width: 100%;
@@ -132,33 +114,27 @@
             align-items: center;
             gap: 25px;
         }
-
-        /* Sprite para el logo redondo inferior izquierdo */
         .logo-footer {
             width: 90px;
             height: 90px;
             background-image: url('../src/imgs/spriteweb.png');
             background-repeat: no-repeat;
             background-position: -302px -505px;
-            /* Apunta al círculo Sprite del centro inferior */
             justify-self: center;
         }
 
         .text-content {
             color: #108a43;
-            /* Texto verde */
             font-size: 14px;
             line-height: 1.6;
             text-align: justify;
         }
 
-        /* Sprite para la lata de la derecha (Lata Sprite Zero abajo a la derecha) */
         .can-footer {
     width: 100px;
     height: 195px;
     background-image: url('../src/imgs/spriteweb.png');
     background-repeat: no-repeat;
-    /* Coordenadas exactas para la lata de aluminio verde */
     background-position: -80px -200px; 
     justify-self: center;
 
@@ -168,7 +144,6 @@
             margin-bottom: 30px !important;
         }
 
-        /* --- NUEVA SECCIÓN FINAL --- */
         .footer-products-section {
             background-color: #ffffff;
             width: 100%;
@@ -181,31 +156,26 @@
             gap: 30px;
         }
 
-        /* Sprite del Combo de Productos (Ubicado abajo a la derecha en la hoja 800x600) */
         .combo-products-sprite {
     width: 275px;
     height: 154px;
     background-image: url('../src/imgs/spriteweb.png');
     background-repeat: no-repeat;
-    /* Coordenadas exactas para centrar el pack completo sin cortes */
     background-position: -520px -440px; 
 }
 
-        /* Menú de navegación del pie de página */
         .nav-footer {
             display: flex;
             justify-content: center;
             gap: 40px;
             width: 100%;
             border-top: 1px solid #e0e0e0;
-            /* Línea sutil divisoria superior opcional */
             padding-top: 20px;
         }
 
         .nav-footer a {
             text-decoration: none;
             color: #777777;
-            /* Texto gris de los enlaces inferiores */
             font-weight: bold;
             font-size: 13px;
             letter-spacing: 0.5px;
@@ -214,7 +184,6 @@
 
         .nav-footer a:hover {
             color: #108a43;
-            /* Cambia a verde al pasar el cursor */
         }
     </style>
 </head>

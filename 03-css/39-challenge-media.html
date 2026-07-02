@@ -8,10 +8,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
         body {
-            font-family: Poppins;
+            font-family: Poppins, sans-serif;
             background: #1a1a2e;
             min-height: 100vh;
             padding: 2rem;
+            margin: 0;
         }
 
         main {
@@ -37,6 +38,7 @@
             font-weight: normal;
             margin-bottom: 2rem;
         }
+        
         .contenedor {
             display: grid;
             gap: 1.5rem;
@@ -81,6 +83,63 @@
             color: #ccc;
         }
 
+        .contenedor-detalles {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tarjeta-informativa {
+            display: grid;
+            grid-template-columns: 240px 1fr; 
+            background: #0f3460;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            align-items: center; 
+            padding: 1rem;       
+        }
+
+        .info-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .info-img img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; 
+            object-fit: cover;  
+            border: 3px solid #e94560; 
+        }
+
+        .info-texto {
+            padding: 1.5rem 2rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-texto h3 {
+            color: #e94560;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .info-texto p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin: 0;
+        }
+
         @media screen and (min-width: 1024px) {
             .contenedor {
                 grid-template-columns: repeat(4, 1fr);
@@ -93,7 +152,12 @@
             h1 {
                 font-size: 3rem;
             }
+
+            .tarjeta-informativa {
+                grid-template-columns: 240px 1fr;
+            }
         }
+
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             .contenedor {
                 grid-template-columns: repeat(2, 1fr);
@@ -110,7 +174,26 @@
             h1 {
                 font-size: 2.2rem;
             }
+
+            .tarjeta-informativa {
+                grid-template-columns: 200px 1fr;
+                padding: 0.8rem;
+            }
+
+            .info-img img {
+                width: 150px;  
+                height: 150px;
+            }
+
+            .info-texto {
+                padding: 1.5rem;
+            }
+
+            .info-texto h3 {
+                font-size: 1.6rem;
+            }
         }
+
         @media screen and (max-width: 767px) {
             .contenedor {
                 grid-template-columns: 1fr;
@@ -136,7 +219,28 @@
             .personaje .caption h3 {
                 font-size: 1rem;
             }
+
+            .tarjeta-informativa {
+                grid-template-columns: 1fr;
+                text-align: center;         
+                padding: 1.5rem;
+            }
+
+            .info-img img {
+                width: 160px;
+                height: 160px;
+                margin: 0 auto 1rem auto; 
+            }
+
+            .info-texto {
+                padding: 0;
+            }
+
+            .info-texto h3 {
+                font-size: 1.4rem;
+            }
         }
+
         @media screen and (max-width: 480px) {
             body {
                 padding: 0.5rem;
@@ -170,6 +274,27 @@
             .personaje .caption p {
                 font-size: 0.8rem;
             }
+
+            .info-img {
+                height: auto;
+            }
+
+            .info-img img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .info-texto padding {
+                padding: 1rem;
+            }
+
+            .info-texto h3 {
+                font-size: 1.2rem;
+            }
+
+            .info-texto p {
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
@@ -177,7 +302,7 @@
     <main>
         <div class="hero">
             <div class="hero-content">
-                <img src="../src/imgs/dinorey_logo.png">
+                <img src="../src/imgs/dinorey_logo.png" alt="Dino Rey" style="display:block; margin: 0 auto; max-width:100%;">
             </div>
         </div>
         
@@ -204,10 +329,52 @@
                 </div>
             </div>
             <div class="personaje">
-                <img src="../src/imgs/Dr.Spike_taylor.webp" >
+                <img src="../src/imgs/Dr.Spike_taylor.webp">
                 <div class="caption">
                     <h3>Dr.Spike</h3>
                     <p>personaje 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-detalles">
+            <div class="tarjeta-informativa">
+                <div class="info-img">
+                    <img src="../src/imgs/zoe.webp" alt="Zoe">
+                </div>
+                <div class="info-texto">
+                    <h3>ZOE DRAKE</h3>
+                    <p>Es una chica alegre, enérgica y un miembro fundamental del Equipo D. Su dinosaurio compañero es Paris, un Parasaurolophus con el atributo de la Hierba. Zoe destaca por su rapidez para idear soluciones en momentos críticos y siempre cuida del bienestar de sus amigos y de los dinosaurios que rescatan de la Pandilla Alpha.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-informativa">
+                <div class="info-img">
+                    <img src="../src/imgs/rex.jpeg" alt="Rex">
+                </div>
+                <div class="info-texto">
+                    <h3>REX OWEN</h3>
+                    <p>Es el cerebro analítico del Equipo D. Es un joven muy inteligente, reservado y experto en computación, lo que ayuda a rastrear la aparición de nuevas cartas de dinosaurios por el mundo. Su compañero es Ace, un veloz Carnotaurus con el atributo del Viento, con quien comparte un fuerte vínculo de lealtad y estrategia de combate.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-informativa">
+                <div class="info-img">
+                    <img src="../src/imgs/max.webp" alt="Max">
+                </div>
+                <div class="info-texto">
+                    <h3>MAX TAYLOR</h3>
+                    <p>Es el entusiasta y apasionado líder del Equipo D. Hijo del Dr. Spike Taylor, Max posee un amor incondicional por los dinosaurios y la aventura. Su incansable compañero es Gabu, un Triceratops con el poderoso atributo del Rayo. Aunque a veces actúa de manera impulsiva, su valentía y gran corazón guían al equipo a la victoria.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-informativa">
+                <div class="info-img">
+                    <img src="../src/imgs/Dr.Spike_taylor.webp" alt="Dr. Spike Taylor">
+                </div>
+                <div class="info-texto">
+                    <h3>DR. SPIKE TAYLOR</h3>
+                    <p>Es un paleontólogo de renombre mundial and el carismático e hiperactivo padre de Max. Descubrió las misteriosas piedras que activan las cartas de los dinosaurios y es el creador de los dispositivos tecnológicos que utiliza el Equipo D. Su pasión por descubrir la verdad detrás de la Pandilla Alpha lo convierte en el mentor del grupo.</p>
                 </div>
             </div>
         </div>
