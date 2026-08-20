@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-get-elements</title>
+    <link rel="stylesheet" href="../src/css/04-js.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        section {
+            ul {
+                padding: 0;
+            }
+            ul li,
+            figure.animal {
+                background-color: #0006;
+                border-radius: 2px;
+                height: 25px;
+                margin: 2px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                zoom: 2.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <!-- SVG corregido y con stroke/fill en amarillo -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#F7DF1E" viewBox="0 0 256 256">
+            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"></path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>00-document style</h1>
+            <h2>description</h2>
+        </header>
+        <section>
+     <section>
+            <h3>Type String:    <small class="type-string"></small></h3>
+            <h3>Type Number:    <small class="type-number"></small></h3>
+            <h3>Type Boolean:   <small class="type-boolean"></small></h3>
+            <h3>Type Null:      <small class="type-null"></small></h3>
+            <h3>Type Undefined: <small class="type-undefined"></small></h3>
+            <h3>Type Array:     <small class="type-array"></small></h3>
+            <h3>Type Object:    <small class="type-object"></small></h3>
+        </section>
+        </section>
+    </main> 
+    <script>
+     const tstring=document.querySelector(".type-string");
+     const num1=45;
+     const num2=12.4;
+     tnumber.textContent=`(45+12+4)->${parceInt(num1)+num2}`
+
+     const tboolean=document.querySelector(".type-boolean")
+     const isTrue=(4<8)
+     tboolean.textContent=`(4<8)->${isTrue}`
+
+     const tnull=document.querySelector(".type-null")
+     const isCreated=null
+     tnull.textContent=`isCreated-> ${isCreated}`
+    
+     const tundefined=document.querySelector(".type-undefinited");
+     const isBinary=undefinited;
+     tundefined.textContent=`isBinary-> ${isBinary}`
+
+     const tarray=document.querySelector(".type-object");
+     const hashira={
+        name:"kyohuro Rengoku",
+        type:"xd",
+        age:20
+     }
+     tobjects.textContent=`${hashira.name}->${hashira.type}`
+    </script>
+</body>
+</html>

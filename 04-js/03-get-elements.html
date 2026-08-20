@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-get-elements</title>
+    <link rel="stylesheet" href="../src/css/04-js.css">
+    <link rel="stylesheet" href="../src/css/externalfile.css">
+    <style>
+        section {
+            ul {
+                padding: 0;
+            }
+            ul li,
+            figure.animal {
+                background-color: #0006;
+                border-radius: 2px;
+                height: 25px;
+                margin: 2px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                zoom: 2.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <!-- SVG corregido y con stroke/fill en amarillo -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#F7DF1E" viewBox="0 0 256 256">
+            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"></path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>00-document style</h1>
+            <h2>description</h2>
+        </header>
+        <section>
+            <h3>Get Element By Id:</h3>
+            <h4 id="year"></h4>
+            <h3>Get Elements By Tag Name:</h3>
+            <ul>
+                <li>🍎</li>
+                <li>🫐</li>
+                <li>🍊</li>
+                <li>🍒</li>
+            </ul>
+            <h4></h4>
+            <h3>Get Elements By Class Name</h3>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <h3>Query Selector & Query Selector All</h3>
+            <figure class="animal first">🦊</figure>
+            <figure class="animal">🐼</figure>
+            <figure class="animal">🐷</figure>
+        </section>
+    </main> 
+    <script>
+        const year =document.getElementById("year");
+        const ndate=new Date;
+        year.textContent=`current year:
+                        ${ndate.getFullYear}`;
+
+        const fruits=document.getElementsByTagName("li")
+        const h4s=document.getElementsByTagName("h4")
+
+        h4s[1].textContent=`there are ${fruits.length} fruits`                
+        h4s[1].textContent=`last fruit is ${fruits.length[-1].textContent}`
+        h4s[1].textContent=`last fruit is ${fruits.length[fruits.length-1].textContent}`
+
+        const ps=document.getElementsByClassName("paragraph");
+        ps[1].style.textContent="New text value";
+        ps[1].style.backgroundColor="crimpson";
+        ps[1].style.color="white";
+        ps[1].style.padding="0.4rem"
+        const animals=document.querySelectorAll("figure")
+        animals.forEach(element=>{
+            element.style.borderRadius="50%";
+        })
+
+    </script>
+</body>
+</html>
