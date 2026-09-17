@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
+  <defs>
+    <!-- Fondo con degradado oscuro suave -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#23272e" />
+      <stop offset="100%" stop-color="#181a1f" />
+    </linearGradient>
+
+    <!-- Gradiente de brillo para la flecha -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#61afef" />
+      <stop offset="100%" stop-color="#abb2bf" />
+    </linearGradient>
+  </defs>
+
+  <!-- Botón con bordes redondeados y borde sutil -->
+  <rect x="8" y="8" width="144" height="134" rx="24" ry="24" fill="url(#bgGrad)" stroke="#3e4451" stroke-width="2" />
+
+  <!-- Icono de Flecha Derecha (Diseño estilizado) -->
+  <g stroke="url(#arrowGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Línea principal -->
+    <line x1="50" y1="58" x2="106" y2="58" />
+    <!-- Cabeza de la flecha -->
+    <polyline points="92,44 106,58 92,72" />
+  </g>
+
+  <!-- Texto "Next" -->
+  <text x="80" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#abb2bf" text-anchor="middle" letter-spacing="0.5">Next</text>
+</svg>
